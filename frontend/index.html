@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyOCR - Extract Text from Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📷 EasyOCR</h1>
+        <p class="subtitle">Extract text from images instantly</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <label for="imageInput" class="upload-label">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Click to upload or drag and drop</p>
+                <span>PNG, JPG, JPEG up to 10MB</span>
+            </label>
+        </div>
+
+        <div id="preview" class="preview" style="display: none;">
+            <img id="previewImage" alt="Preview">
+        </div>
+
+        <button id="extractBtn" class="btn" style="display: none;">Extract Text</button>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing image...</p>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+            <h2>Extracted Text</h2>
+            <textarea id="extractedText" readonly></textarea>
+            <div class="button-group">
+                <button id="copyBtn" class="btn btn-secondary">📋 Copy Text</button>
+                <button id="downloadPdfBtn" class="btn btn-secondary">📄 Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

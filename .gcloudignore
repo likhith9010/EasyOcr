@@ -1,0 +1,14 @@
+.gcloudignore
+.git
+.gitignore
+node_modules
+venv/
+__pycache__/
+*.pyc
+uploads/
+extracted_texts/
+frontend/
+templates/
+static/
+README.md
+DEPLOYMENT.md
