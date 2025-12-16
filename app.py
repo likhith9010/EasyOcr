@@ -3,12 +3,14 @@
 # This is the main file for my EasyOcr app
 
 import os
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, jsonify
+from flask_cors import CORS
 import easyocr
 from PIL import Image
 from reportlab.pdfgen import canvas
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for Vercel frontend
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -41,4 +43,5 @@ def download():
     return send_file(os.path.join(UPLOAD_FOLDER, 'output.pdf'), as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=False)

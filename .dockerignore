@@ -1,0 +1,12 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore venv
+venv/
+
+# Ignore uploads and outputs
+uploads/*
+!uploads/.gitkeep
+extracted_texts/*
+!extracted_texts/.gitkeep
