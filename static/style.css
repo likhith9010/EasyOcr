@@ -1,0 +1,104 @@
+/* static/style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #e6ecff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+form {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    justify-content: middle;
+    background-color: #4b7bec;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #3867d6;
+}
+
+.output {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.output h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.output pre {
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 15px;
+    background: #f7f9fc;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #20bf6b;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.download-link:hover {
+    background: #0fb962;
+}
+
+.chatbox {
+    text-align: left;
+    margin-top: 30px;
+    background: #dfe6e9;
+    padding: 15px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+

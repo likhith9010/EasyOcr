@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Text Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🧠 OCR Text & Number Extractor</h1>
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload & Extract</button>
+    </form>
+
+    {% if text %}
+        <div class="output">
+            <h3>📝 Extracted Text:</h3>
+            <pre>{{ text }}</pre>
+            <a class="download-link" href="{{ pdf_url }}">📥 Download PDF</a>
+        </div>
+    {% endif %}
+</body>
+</html>
